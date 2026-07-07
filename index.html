@@ -7,111 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Work Sans', sans-serif; color: #111111; background: #ffffff; }
-
-  /* ---------- Splash screen ---------- */
-  #splash {
-    position: fixed; inset: 0; z-index: 100;
-    background: #ff0000;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  #splash.hidden { opacity: 0; pointer-events: none; }
-  #splash.removed { display: none; }
-  #splash .mark {
-    display: flex; flex-direction: column; align-items: center; gap: 22px;
-    transform: translateY(-9vh);
-  }
-  #splash .bolt {
-    height: 150px; width: auto;
-    animation: bolt-pulse 1.6s ease-in-out infinite;
-  }
-  #splash .wordmark {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 60px; letter-spacing: 1px; color: #ffffff;
-  }
-  #splash .tagline {
-    position: absolute; bottom: 26px; left: 0; right: 0;
-    text-align: center; font-size: 12px; font-weight: 600;
-    letter-spacing: 3px; color: #ffffff;
-  }
-  @keyframes bolt-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-  }
-
-  /* ---------- Page ---------- */
-  #page {
-    min-height: 100vh; width: 100%;
-    display: flex; flex-direction: column; align-items: center;
-  }
-  .container { width: 100%; max-width: 480px; display: flex; flex-direction: column; flex: 1; }
-
-  .hero {
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    padding: 48px 32px 40px; gap: 18px;
-  }
-  .hero img { width: 100%; max-width: 340px; height: auto; }
-  .hero p { font-size: 17px; line-height: 1.5; opacity: 0.75; max-width: 320px; }
-
-  .links { display: flex; flex-direction: column; gap: 16px; padding: 36px 24px 130px; }
-  .link-card {
-    display: flex; align-items: center; justify-content: space-between;
-    min-height: 92px; padding: 0 26px; border-radius: 14px;
-    text-decoration: none; color: #ffffff;
-  }
-  .link-card.primary { background: #ff0000; }
-  .link-card.dark { background: #111111; }
-  .link-title { display: flex; flex-direction: column; gap: 2px; }
-  .link-title .label { font-family: 'Archivo Black', sans-serif; font-size: 24px; letter-spacing: 0.5px; }
-  .link-title .sub { font-size: 14px; }
-  .link-card.primary .sub { opacity: 0.85; }
-  .link-card.dark .sub { color: #ff5b5b; }
-  .chevron { font-family: 'Archivo Black', sans-serif; font-size: 28px; line-height: 1; }
-  .link-card.primary .chevron { color: #ffffff; }
-  .link-card.dark .chevron { color: #ff0000; }
-
-  /* ---------- Footer ---------- */
-  footer {
-    position: fixed; left: 0; right: 0; bottom: 0; width: 100%;
-    background: #111111; display: flex; justify-content: center; z-index: 20;
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.25);
-  }
-  .footer-inner {
-    width: 100%; max-width: 480px;
-    display: flex; flex-direction: column; align-items: center; gap: 12px;
-    padding: 18px 24px 22px;
-  }
-  .socials { display: flex; gap: 14px; }
-  .social-btn {
-    width: 42px; height: 42px; border-radius: 50%;
-    background: rgba(255,255,255,0.1); color: #ffffff;
-    display: flex; align-items: center; justify-content: center;
-    text-decoration: none;
-  }
-  .copyright { font-size: 12px; letter-spacing: 0.5px; color: #ffffff; opacity: 0.5; }
-</style>
+<link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-
-<!--
-  EDIT THE LINKS BELOW — this is the only place you need to touch
-  for URLs and social handles.
--->
-<script>
-  var LINKS = {
-    shop: 'https://zhatka.com.au/',
-    recipes: 'https://zhatka.com.au/pages/recipes',   // placeholder — page not created yet
-    feedback: 'https://zhatka.com.au/pages/contact',  // guessed contact page — confirm real URL
-    instagram: 'https://instagram.com/',              // placeholder — add real handle
-    tiktok: 'https://tiktok.com/',                     // placeholder — add real handle
-    facebook: 'https://facebook.com/',                 // placeholder — add real handle
-  };
-</script>
 
 <div id="splash" data-screen-label="Zhatka splash">
   <div class="mark">
@@ -175,26 +73,7 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('link-shop').href = LINKS.shop;
-  document.getElementById('link-recipes').href = LINKS.recipes;
-  document.getElementById('link-feedback').href = LINKS.feedback;
-  document.getElementById('link-instagram').href = LINKS.instagram;
-  document.getElementById('link-tiktok').href = LINKS.tiktok;
-  document.getElementById('link-facebook').href = LINKS.facebook;
-  document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' Zhatka';
-
-  var splash = document.getElementById('splash');
-  var dismissed = false;
-  function dismissSplash() {
-    if (dismissed) return;
-    dismissed = true;
-    splash.classList.add('hidden');
-    setTimeout(function () { splash.classList.add('removed'); }, 500);
-  }
-  splash.addEventListener('click', dismissSplash);
-  setTimeout(dismissSplash, 1500);
-</script>
+<script type="module" src="/src/main.js"></script>
 
 </body>
 </html>
