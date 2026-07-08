@@ -16,6 +16,14 @@ document.getElementById('link-instagram').href = LINKS.instagram;
 document.getElementById('link-tiktok').href = LINKS.tiktok;
 document.getElementById('link-facebook').href = LINKS.facebook;
 document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' Zhatka';
+document.getElementById('version').textContent = 'v' + __APP_VERSION__;
+
+var footer = document.querySelector('footer');
+function syncFooterSpace() {
+  document.documentElement.style.setProperty('--footer-h', footer.offsetHeight + 'px');
+}
+syncFooterSpace();
+window.addEventListener('resize', syncFooterSpace);
 
 var splash = document.getElementById('splash');
 var dismissed = false;
