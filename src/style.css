@@ -43,7 +43,7 @@ body { font-family: 'Work Sans', sans-serif; color: #111111; background: #ffffff
 
 .hero {
   display: flex; flex-direction: column; align-items: center; text-align: center;
-  padding: 28px 32px 4px; gap: 10px;
+  padding: 28px 32px 30px; gap: 10px;
 }
 .hero img { width: 100%; max-width: 340px; height: auto; }
 .hero p { font-size: 17px; line-height: 1.5; opacity: 0.75; max-width: 320px; }
@@ -57,7 +57,7 @@ body { font-family: 'Work Sans', sans-serif; color: #111111; background: #ffffff
 .link-card.primary { background: #ff0000; }
 .link-card.maroon { background: #7a1414; }
 .link-card.charcoal { background: #262626; }
-.link-title { display: flex; flex-direction: column; gap: 2px; }
+.link-title { display: flex; flex-direction: column; gap: 6px; }
 .link-title .label { font-family: 'Archivo Black', sans-serif; font-size: 24px; letter-spacing: 0.5px; }
 .link-title .sub { font-size: 14px; }
 .link-card.primary .sub { opacity: 0.85; }
