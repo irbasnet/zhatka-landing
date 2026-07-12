@@ -1,25 +1,23 @@
 import { Link } from 'react-router-dom';
+import { MessageSquareMore, ShoppingCart, CookingPot } from 'lucide-react';
 import { LINKS } from '../config/links';
-import ChatIcon from './icons/ChatIcon';
-import BagIcon from './icons/BagIcon';
-import SkilletIcon from './icons/SkilletIcon';
 
 export default function LinkButtons() {
   return (
     <div className="links">
       <Link className="link-card" to="/feedback">
-        <ChatIcon />
+        <MessageSquareMore className="icon" size={18} strokeWidth={2} />
         <span className="label">Leave Feedback</span>
       </Link>
 
-      <a className="link-card" href={LINKS.shop} target="_blank" rel="noopener noreferrer">
-        <BagIcon />
-        <span className="label">Shop More Recipes</span>
+      <a className="link-card" href={LINKS.recipes}>
+        <CookingPot className="icon" size={18} strokeWidth={2} />
+        <span className="label">Cook with Zhatka</span>
       </a>
 
-      <a className="link-card" href={LINKS.recipes}>
-        <SkilletIcon />
-        <span className="label">Cook with Zhatka</span>
+      <a className="link-card" href={LINKS.shop} target="_blank" rel="noopener noreferrer">
+        <ShoppingCart className="icon" size={18} strokeWidth={2} />
+        <span className="label">Shop More</span>
       </a>
     </div>
   );

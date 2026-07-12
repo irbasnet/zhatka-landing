@@ -1,10 +1,7 @@
 export default function Hero() {
   return (
     <div className="hero">
-      <div className="mark">
-        <img className="bolt" src="/assets/zhatka-bolt-red.svg" alt="" />
-        <span className="wordmark">ZHATKA</span>
-      </div>
+      <img className="logo" src="/assets/zhatka-logo.svg" alt="Zhatka" />
       <p>Deeply flavourful. Wildly Himalayan.</p>
     </div>
   );

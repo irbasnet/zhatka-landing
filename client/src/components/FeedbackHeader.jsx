@@ -6,10 +6,7 @@ export default function FeedbackHeader() {
       <Link className="back-link" to="/">
         <span aria-hidden="true">←</span> Back
       </Link>
-      <div className="brand">
-        <span className="brand-wordmark">ZHATKA</span>
-        <span className="brand-avatar">Z</span>
-      </div>
+      <img className="brand-logo" src="/assets/zhatka-logo.svg" alt="Zhatka" />
     </div>
   );
 }

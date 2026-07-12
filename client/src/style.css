@@ -45,12 +45,7 @@ body { font-family: 'Manrope', sans-serif; color: #111111; background: #ffffff; 
   display: flex; flex-direction: column; align-items: center; text-align: center;
   padding: 28px 32px 30px; gap: 10px;
 }
-.hero .mark { display: flex; align-items: center; gap: 10px; }
-.hero .bolt { height: 36px; width: auto; }
-.hero .wordmark {
-  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
-  font-size: 32px; letter-spacing: 0.5px; color: #111111;
-}
+.hero .logo { width: 100%; max-width: 340px; height: auto; }
 .hero p {
   font-family: 'Manrope', sans-serif; font-weight: 500;
   font-size: 15px; line-height: 1.5; opacity: 0.75; max-width: 320px;
@@ -100,7 +95,7 @@ footer {
 .meta #version { opacity: 0.3; }
 
 /* ---------- Feedback page ---------- */
-.feedback-page { margin: 0 auto; padding: 24px 24px 48px; gap: 0; }
+.feedback-page { margin: 0 auto; padding: 24px 24px calc(var(--footer-h, 145px) + 24px); gap: 0; }
 
 .feedback-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; }
 .back-link {
@@ -108,17 +103,7 @@ footer {
   font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 15px;
   color: #6b6b6b; text-decoration: none;
 }
-.brand { display: flex; align-items: center; gap: 10px; }
-.brand-wordmark {
-  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
-  font-size: 16px; letter-spacing: 0.3px; color: #111111;
-}
-.brand-avatar {
-  width: 30px; height: 30px; border-radius: 50%;
-  background: #ffd3ce; color: #ff4b3e;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 14px;
-}
+.brand-logo { height: 26px; width: auto; }
 
 .divider { border: none; border-top: 1px solid #ececec; margin: 20px 0; }
 
@@ -180,6 +165,10 @@ footer {
 }
 .contact-fields input:focus { outline: 2px solid #ff4b3e; outline-offset: 1px; }
 
+.field-error {
+  font-family: 'Manrope', sans-serif; font-size: 12px; color: #d32f2f;
+  margin-top: 8px;
+}
 .feedback-error {
   font-family: 'Manrope', sans-serif; font-size: 13px; color: #d32f2f;
   text-align: center; margin-bottom: 12px;
@@ -196,3 +185,92 @@ footer {
   font-family: 'Manrope', sans-serif; font-weight: 500;
   font-size: 14px; color: #8a8a8a; margin-top: 10px;
 }
+
+/* ---------- Admin login ---------- */
+.admin-login {
+  min-height: 100vh; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.admin-login-card {
+  width: 100%; max-width: 340px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.admin-login-logo { width: 100%; max-width: 220px; height: auto; margin-bottom: 8px; }
+.admin-login-card h1 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; color: #111111;
+}
+.admin-login-card input {
+  width: 100%; border: 1px solid #e2e2e2; border-radius: 12px;
+  padding: 14px 16px; font-family: 'Manrope', sans-serif; font-size: 14px;
+}
+.admin-login-card input:focus { outline: 2px solid #ff4b3e; outline-offset: 1px; }
+.admin-login-card .submit-btn { width: 100%; }
+
+/* ---------- Admin dashboard ---------- */
+.admin-dashboard { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+.admin-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.admin-logo { height: 30px; width: auto; }
+.admin-header h1 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; color: #111111; flex: 1;
+}
+.admin-logout {
+  border: 1px solid #e2e2e2; background: none; border-radius: 10px;
+  padding: 8px 14px; font-family: 'Manrope', sans-serif; font-weight: 600;
+  font-size: 13px; color: #111111; cursor: pointer;
+}
+
+.admin-filters {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 16px;
+  padding: 16px; margin-bottom: 20px;
+  background: #fafafa; border: 1px solid #ececec; border-radius: 14px;
+}
+.admin-filters label {
+  display: flex; flex-direction: column; gap: 6px;
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 12px; color: #6b6b6b;
+}
+.admin-filters input, .admin-filters select {
+  border: 1px solid #e2e2e2; border-radius: 8px; padding: 8px 10px;
+  font-family: 'Manrope', sans-serif; font-size: 13px; color: #111111;
+}
+.admin-clear {
+  border: none; background: none; text-decoration: underline;
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 13px;
+  color: #ff4b3e; cursor: pointer; padding: 8px 0;
+}
+
+.admin-table-wrap { width: 100%; overflow-x: auto; border: 1px solid #ececec; border-radius: 14px; }
+.admin-table { width: 100%; border-collapse: collapse; font-family: 'Manrope', sans-serif; font-size: 13px; }
+.admin-table th {
+  text-align: left; padding: 12px 16px; background: #fafafa;
+  font-weight: 700; color: #111111; border-bottom: 1px solid #ececec; white-space: nowrap;
+}
+.admin-table td {
+  padding: 12px 16px; border-bottom: 1px solid #f2f2f2; color: #111111; vertical-align: top;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-comment { max-width: 320px; white-space: pre-wrap; }
+.admin-empty { text-align: center; color: #8a8a8a; padding: 32px !important; }
+.admin-sort {
+  border: none; background: none; cursor: pointer; padding: 0;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 13px; color: #111111;
+}
+
+.admin-pagination {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 16px; margin-top: 16px;
+  font-family: 'Manrope', sans-serif; font-size: 13px; color: #6b6b6b;
+}
+.admin-pagination label { display: flex; align-items: center; gap: 8px; }
+.admin-pagination select {
+  border: 1px solid #e2e2e2; border-radius: 8px; padding: 6px 8px; font-family: inherit; font-size: 13px;
+}
+.admin-page-btns { display: flex; align-items: center; gap: 12px; }
+.admin-page-btns button {
+  border: 1px solid #e2e2e2; background: #ffffff; border-radius: 8px;
+  padding: 6px 14px; font-family: inherit; font-weight: 600; font-size: 13px;
+  color: #111111; cursor: pointer;
+}
+.admin-page-btns button:disabled { opacity: 0.4; cursor: not-allowed; }
