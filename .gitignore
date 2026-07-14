@@ -4,6 +4,8 @@ node_modules/
 dist/
 bin/
 obj/
+publish/
+server/Zhatka.Api/wwwroot/
 .env
 .env.local
 *.user

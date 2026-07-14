@@ -49,6 +49,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.UseCors("ClientDev");
 
 app.UseAuthentication();
@@ -57,5 +60,7 @@ app.UseAuthorization();
 app.MapProductEndpoints();
 app.MapFeedbackEndpoints();
 app.MapAdminEndpoints();
+
+app.MapFallbackToFile("index.html");
 
 app.Run();
