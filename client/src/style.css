@@ -51,7 +51,7 @@ body { font-family: 'Manrope', sans-serif; color: #111111; background: #ffffff; 
   font-size: 15px; line-height: 1.5; opacity: 0.75; max-width: 320px;
 }
 
-.links { display: flex; flex-direction: column; gap: 14px; padding: 16px 24px calc(var(--footer-h, 145px) + 20px); }
+.links { display: flex; flex-direction: column; gap: 14px; padding: 16px 24px calc(var(--footer-h, 145px) + var(--banner-h, 0px) + 20px); }
 .link-card {
   display: flex; align-items: center; justify-content: center;
   gap: 9px; min-height: 56px; padding: 18px 24px; border-radius: 18px;
@@ -66,6 +66,22 @@ body { font-family: 'Manrope', sans-serif; color: #111111; background: #ffffff; 
 }
 .icon { flex: 0 0 auto; }
 .label { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.1px; }
+
+/* ---------- Marquee banner ---------- */
+.marquee-banner {
+  position: fixed; left: 0; right: 0; bottom: var(--footer-h, 145px);
+  z-index: 20; background: #ff0000; overflow: hidden; white-space: nowrap;
+}
+.marquee-track { display: inline-flex; width: max-content; animation: marquee-scroll 20s linear infinite; }
+.marquee-item {
+  display: inline-block; flex: 0 0 auto; padding: 16px 32px;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px;
+  letter-spacing: 0.5px; color: #ffffff;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
 /* ---------- Footer ---------- */
 footer {
@@ -185,6 +201,72 @@ footer {
   font-family: 'Manrope', sans-serif; font-weight: 500;
   font-size: 14px; color: #8a8a8a; margin-top: 10px;
 }
+
+/* ---------- Recipes page ---------- */
+.recipes-page { margin: 0 auto; padding: 24px 24px calc(var(--footer-h, 145px) + 24px); gap: 0; }
+
+.eyebrow {
+  font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 11px;
+  letter-spacing: 1.5px; text-transform: uppercase; color: #ff4b3e;
+}
+.recipes-intro { padding: 16px 0 28px; }
+.recipes-intro h1 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 28px; line-height: 1.15; letter-spacing: 0.2px; color: #111111; margin-top: 6px;
+}
+.recipes-sub {
+  font-family: 'Manrope', sans-serif; font-weight: 500;
+  font-size: 14px; color: #8a8a8a; margin-top: 10px;
+}
+
+.product-cards { display: flex; flex-direction: column; gap: 16px; }
+.product-card { border-radius: 18px; padding: 22px 22px 20px; }
+.theme-timur { background: #ffb81c; color: #111111; }
+.theme-dalle { background: #e94806; color: #ffffff; }
+.theme-achar { background: #ff0000; color: #ffffff; }
+
+.card-accent { display: block; width: 28px; height: 4px; border-radius: 2px; background: currentColor; margin-bottom: 14px; }
+.card-name {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; letter-spacing: 0.2px;
+}
+.card-tagline {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 12px;
+  letter-spacing: 0.5px; text-transform: uppercase; opacity: 0.85; margin-top: 2px;
+}
+
+.heat-rating { display: flex; gap: 3px; margin-top: 14px; }
+.flame-on { opacity: 1; }
+.flame-off { opacity: 0.35; }
+.heat-label {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 12px;
+  margin-top: 8px; opacity: 0.9;
+}
+
+.card-desc {
+  font-family: 'Manrope', sans-serif; font-weight: 500; font-size: 14px;
+  line-height: 1.5; margin-top: 14px; opacity: 0.95;
+}
+
+.card-divider { border: none; border-top: 1px solid currentColor; opacity: 0.25; margin: 16px 0 14px; }
+
+.tag-label {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 11px;
+  letter-spacing: 0.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px;
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-pill {
+  border: 1px solid currentColor; border-radius: 7px; padding: 5px 10px;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 11px;
+  letter-spacing: 0.3px; text-transform: uppercase;
+}
+
+.recipes-outro { padding: 32px 0 8px; }
+.recipes-outro h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 24px; letter-spacing: 0.2px; color: #111111; margin-top: 6px;
+}
+.recipes-outro .recipes-sub a { color: #ff4b3e; font-weight: 700; text-decoration: none; }
 
 /* ---------- Admin login ---------- */
 .admin-login {

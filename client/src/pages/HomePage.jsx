@@ -1,6 +1,7 @@
 import Splash from '../components/Splash';
 import Hero from '../components/Hero';
 import LinkButtons from '../components/LinkButtons';
+import MarqueeBanner from '../components/MarqueeBanner';
 import Footer from '../components/Footer';
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
           <LinkButtons />
         </div>
       </div>
+      <MarqueeBanner />
       <Footer />
     </>
   );
