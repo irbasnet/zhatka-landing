@@ -10,3 +10,7 @@ server/Zhatka.Api/wwwroot/
 .env.local
 *.user
 .vite/
+logs/
+keys/
+server/Zhatka.Api/appsettings.Production.json
+deploy.zip

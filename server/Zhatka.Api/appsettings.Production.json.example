@@ -1,0 +1,8 @@
+{
+  "ConnectionStrings": {
+    "ZhatkaFeedback": "Server=YOUR_DB_SERVER.smarterasp.net;Database=YOUR_DB_NAME;User Id=YOUR_DB_USER;Password=YOUR_DB_PASSWORD;TrustServerCertificate=True;"
+  },
+  "Admin": {
+    "Password": "REPLACE_WITH_A_REAL_PASSWORD"
+  }
+}
