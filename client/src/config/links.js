@@ -2,9 +2,9 @@
 // for URLs and social handles.
 export const LINKS = {
   shop: 'https://zhatka.com.au/',
-  instagram: 'https://instagram.com/',              // placeholder — add real handle
-  tiktok: 'https://tiktok.com/',                     // placeholder — add real handle
-  facebook: 'https://facebook.com/',                 // placeholder — add real handle
+  instagram: 'https://instagram.com/getzhatka',
+  tiktok: 'https://tiktok.com/@getzhatka',
+  facebook: 'https://facebook.com/getzhatka',
 };
 
 // Feature toggles — flip to true/false to show/hide parts of the site.
